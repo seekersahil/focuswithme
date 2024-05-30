@@ -1,0 +1,39 @@
+.spinner-wrap {
+  position: relative;
+  margin-top: 200px;
+}
+
+.spinner-item {
+  border: 3px solid red;
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: zoom 2s linear 0.75s infinite;
+}
+
+.spinner-item.spinner-item--2 {
+  animation-delay: 1.25s;
+}
+
+.spinner-item.spinner-item--3 {
+  animation-delay: 1.75s;
+}
+
+@keyframes zoom {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
